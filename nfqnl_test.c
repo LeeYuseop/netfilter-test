@@ -111,6 +111,11 @@ int main(int argc, char **argv)
 	int rv;
 	char buf[4096] __attribute__ ((aligned));
 
+	if(argc == 1){
+		printf("syntax : netfilter-test <host>\n");
+		printf("sample : netfilter-test test.gilgil.net\n");
+		return 0;
+	}
 	ban = argv[1];
 
 	printf("opening library handle\n");
